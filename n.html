@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Reset semua margin dan padding biar gak ada elemen yang aneh */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; /* Biar gampang ngerapihin layout */
+        }
+
+        /* Bikin body jadi nyaman, dengan latar belakang gradien dan form di tengah-tengah */
+        body {
+            font-family: 'Arial', sans-serif; /* Font yang simple dan clean */
+            background: linear-gradient(45deg, #6a11cb, #2575fc); /* Latar belakang keren dengan gradasi warna */
+            display: flex; /* Pake Flexbox buat ngebikin formnya jadi centering */
+            justify-content: center; /* Ngeratain konten ke tengah horizontal */
+            align-items: center; /* Ngeratain konten ke tengah vertical */
+            height: 100vh; /* Biar halaman nge-full sampe bawah */
+        }
+
+        /* Kontainer buat form login, biar formnya rapi di tengah */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%; /* Biar tetap di tengah di seluruh halaman */
+        }
+
+        /* Kotak login dengan sedikit bayangan dan sudut yang melengkung */
+        .login-box {
+            background-color: #fff; /* Warna background kotaknya putih, biar clean */
+            padding: 40px; /* Kasih ruang di dalam form biar gak terlalu sempit */
+            border-radius: 10px; /* Sudut kotaknya dibuletin, biar kelihatan modern */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Kasih bayangan sedikit biar kotaknya gak datar banget */
+            width: 100%; /* Supaya kotak login fleksibel */
+            max-width: 400px; /* Lebar maksimal kotaknya 400px biar gak kegedean */
+        }
+
+        /* Judul di atas form login, biar tegas dan gampang dibaca */
+        h2 {
+            text-align: center; /* Ngecentering teks judul */
+            color: #333; /* Warna teks hitam agak keabu-abuan */
+            margin-bottom: 20px; /* Kasih jarak antara judul sama formnya */
+            font-size: 24px; /* Ukuran font agak gede biar keliatan jelas */
+            font-weight: bold; /* Tebalin font judul biar lebih keren */
+        }
+
+        /* Styling untuk input field (kolom isian username dan password) */
+        .input-group {
+            margin-bottom: 20px; /* Kasih jarak antar input */
+        }
+
+        /* Label di atas input, biar tau ini kolom buat apa */
+        label {
+            display: block; /* Biar labelnya ada di atas input */
+            font-size: 14px; /* Ukuran font label agak kecil biar gak ganggu */
+            color: #555; /* Warna label lebih terang, biar enak dibaca */
+            margin-bottom: 5px; /* Kasih jarak antara label dan input */
+        }
+
+        /* Styling buat kolom input, biar enak dilihat */
+        input {
+            width: 100%; /* Biar kolom inputnya penuh, gak ada ruang kosong */
+            padding: 12px; /* Kasih ruang di dalam input biar gak sesak */
+            font-size: 16px; /* Ukuran font dalam input, biar gampang dibaca */
+            border: 2px solid #ccc; /* Warna border abu-abu biar gak terlalu mencolok */
+            border-radius: 5px; /* Kasih sudut melengkung sedikit biar lebih soft */
+            margin-top: 5px; /* Kasih jarak antara label dan input */
+            transition: all 0.3s ease; /* Biar animasi saat interaksi lebih smooth */
+        }
+
+        /* Efek saat input difokusin, biar keliatan aktif */
+        input:focus {
+            border-color: #2575fc; /* Ganti warna border jadi biru pas fokus */
+            box-shadow: 0 0 10px rgba(37, 117, 252, 0.4); /* Kasih bayangan biru biar kelihatan fokus */
+            outline: none; /* Hilangin outline default browser */
+        }
+
+        /* Styling buat tombol login, biar tampak keren dan ngeklik gampang */
+        .login-btn {
+            width: 100%; /* Biar tombolnya penuh, ngikutin lebar form */
+            padding: 12px; /* Kasih ruang dalam tombol */
+            font-size: 16px; /* Ukuran font tombol yang nyaman dibaca */
+            background-color: #2575fc; /* Warna biru tombol */
+            color: white; /* Warna teks tombol putih biar kontras */
+            border: none; /* Gak perlu border, supaya lebih bersih */
+            border-radius: 5px; /* Sudut tombol dibuletin biar kelihatan modern */
+            cursor: pointer; /* Ganti kursor jadi pointer saat hover di tombol */
+            transition: background-color 0.3s ease; /* Animasi smooth pas hover */
+        }
+
+        /* Efek saat tombol di-hover, jadi warna biru ke ungu */
+        .login-btn:hover {
+            background-color: #6a11cb; /* Ganti jadi ungu saat tombol di-hover */
+        }
+
+        /* Penyesuaian tampilan di perangkat kecil, biar tetap nyaman dilihat */
+        @media (max-width: 500px) {
+            .login-box {
+                width: 90%; /* Bikin kotaknya lebih kecil dan responsif di layar sempit */
+                padding: 30px; /* Kasih padding lebih sedikit biar lebih pas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Masukkan username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
